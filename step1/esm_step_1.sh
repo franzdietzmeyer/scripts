@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # Define the input files
-N1="input/r1_HA_Michigan_2024_sym_INPUT.pdb"
-N2="input/r2_HA_Michigan_2024_sym_INPUT.pdb"
-N3="input/r3_HA_Michigan_2024_sym_INPUT.pdb"
+N1="input/r6_HA_Michigan_2024_sym_INPUT.pdb"
+N2="input/r7_HA_Michigan_2024_sym_INPUT.pdb"
+N3="input/r8_HA_Michigan_2024_sym_INPUT.pdb"
+N4="input/r9_HA_Michigan_2024_sym_INPUT.pdb"
+N5="input/r10_HA_Michigan_2024_sym_INPUT.pdb"
+
 
 # Array of input files
 input_files=($N1 $N2 $N3)
