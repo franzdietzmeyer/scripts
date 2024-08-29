@@ -18,7 +18,7 @@ do
     mkdir -p "$base_name"
 
     # Run the command with the current input file and direct output to the created folder
-    rosetta_scripts.pytorchtensorflow.linuxclangrelease \
+    docker run -v $(pwd):/home/iwe53/sissi/scripts/step1 -w /home/iwe53/sissi/scripts/step1 rosettacommons/rosetta:ml rosetta_scripts \
         -parser:protocol run_esm_and_save.xml \
         -s "$input_file" \
         -parser:script_vars pssm="$base_name" \
@@ -26,6 +26,7 @@ do
         -ex2aro \
         -nstruct 1000 \
         -beta \
-        -out:path:all "$base_name"
+        -out:path:all "$base_name" \
+        -auto_download
 
 done
